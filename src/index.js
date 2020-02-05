@@ -10,7 +10,7 @@ const App = () => {
     const buttonText = { text: 'Click Me!' };
     return (
         <div>
-            <label className="label" for="name" style={{ color: "pink", weight: "bold", marginRight: "7px" }}>ENTER NAME</label>
+            <label className="label" htmlFor="name" style={{ color: "pink", weight: "bold", marginRight: "7px" }}>ENTER NAME</label>
             <input id="name" type="text" />
             <button style={{ backgroundColor: "pink", font: "Times New Roman" }}>
                 {buttonText.text}
