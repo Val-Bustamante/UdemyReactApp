@@ -4,14 +4,12 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 
-const App = () => {
+const SeasonDisplay = () => {
     return (
         <div>
-            Hi there!
+            Season display
         </div>
     )
-}
+};
 
-ReactDOM.render(
-    <App />, document.querySelector('#root')
-);
+export default SeasonDisplay;
