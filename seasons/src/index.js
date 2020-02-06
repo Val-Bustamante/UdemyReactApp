@@ -5,6 +5,14 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 
 const App = () => {
+    //find user's current location
+    window.navigator.geolocation.getCurrentPosition(
+        //Argument 1: success callback
+        (position) => console.log(position),
+        //Argument 2: failure callback
+        (err) => console.log(err)
+
+    )
     return (
         <div>
             Hi there!
