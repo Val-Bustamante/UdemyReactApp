@@ -1,15 +1,43 @@
 //App component: location and month figuring out
 //SeasonDisplay customizes itself based on what props App passes down
 
+//webpack will take the conents out and stick into the html
+import './SeasonDisplay.css'
 import React from 'react';
-import ReactDOM from 'react-dom';
 
-const SeasonDisplay = () => {
+const seasonConfig = {
+    summer: {
+        text: 'Lets hit the beach',
+        iconName: 'sun'
+    },
+    winter: {
+        text: 'Burr its cold',
+        iconName: 'snowflake'
+    }
+}
+
+const getSeason = (lat, month) => {
+    if (month > 2 && month < 9) {
+        return lat > 0 ? 'summer' : 'winter';
+    } else {
+        return lat > 0 ? 'winter' : 'summer';
+    }
+}
+
+const SeasonDisplay = props => {
+    const season = getSeason(props.lat, new Date().getMonth());
+    console.log(season === 'winter' ? 'Burr it is chilly!' : 'Lets go to the beach');
+    const { text, iconName } = seasonConfig[season] //return text, iconName
+
     return (
-        <div>
-            Season display
+        <div className={`season-display ${season}`}>
+            <i className={`icon-left massive ${iconName} icon`} />
+            <h1>{text}</h1>
+            <i className={`icon-right massive ${iconName} icon`} />
         </div>
-    )
-};
+    );
+
+}
 
 export default SeasonDisplay;
+
