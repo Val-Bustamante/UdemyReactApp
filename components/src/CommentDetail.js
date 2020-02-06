@@ -1,8 +1,7 @@
 //create new component for a single component
 
 import React from 'react'
-import ReactDOM from "react-dom"
-import faker from 'faker'
+
 
 const CommentDetail = (props) => {
     return (
@@ -24,7 +23,7 @@ const CommentDetail = (props) => {
                 </div>
             </div>
         </div>
-    )
+    );
 }
 
 export default CommentDetail;
