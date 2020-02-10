@@ -16,7 +16,9 @@ class SearchBar extends React.Component {
         event.preventDefault();
         //TO do: call callback from parent app component
         //to tell app that the user submitted form and parts of the app need to rerender
+        this.props.onSubmit(this.state.term)
         
+
     }
 
     render() {
