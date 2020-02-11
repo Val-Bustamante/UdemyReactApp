@@ -1,6 +1,6 @@
 import React from 'react'
 import { connect } from 'react-redux'
-import { selectSong } from '../action'
+import { selectSong } from '../actions'
 
 class SongList extends React.Component {
     renderList() {
@@ -43,6 +43,10 @@ const mapStateToProps = (state) => {
 //Connect function that reaches up and gets the list of songs
 //connect is a function that returns a function
 //Connect will always be called and component will always be second arg
+//BY passing in action creators into the connect function
+//the connect function does a special operation on the functions inside the object
+//wraps them in a js function, and calls dispatch for us with the action
+//returned by the action creator
 export default connect(mapStateToProps, {
     selectSong: selectSong
 })(SongList);

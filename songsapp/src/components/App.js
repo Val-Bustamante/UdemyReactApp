@@ -4,6 +4,7 @@ ActionCreator: SelectedSong (change of state)
 Components: SongList, SongDetail
 */
 import React from 'react'
+import SongDetail from "./SongDetail"
 import SongList from "./SongList"
 //import { selectSong } from '../actions'
 //{} says we want to import a named export
@@ -15,6 +16,9 @@ const App = () => {
             <div className="ui row">
                 <div className="column eight wide">
                     <SongList />
+                </div>
+                <div className="coumn eight wide">
+                    <SongDetail/>
                 </div>
             </div>
         </div>)
