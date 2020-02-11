@@ -5,7 +5,7 @@ import App from "./components/App"
 
 import reducers from './reducers'
 import { Provider } from 'react-redux'
-import { createSTore, createStore } from 'redux'
+import { createStore } from 'redux'
 
 ReactDOM.render(
     //any component in application can get access to store through the provider tag
