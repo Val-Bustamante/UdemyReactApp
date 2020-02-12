@@ -11,6 +11,7 @@ import reducers from './reducers'
 
 //hooking up middleware to redux store
 const store = createStore(reducers, applyMiddleware(thunk))
+
 ReactDOM.render(
     <Provider store ={store}>
         <App />
